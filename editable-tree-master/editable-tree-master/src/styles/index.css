@@ -1,0 +1,11 @@
+.container-demo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-input {
+  width: 400px;
+  margin-left: 100px;
+}
