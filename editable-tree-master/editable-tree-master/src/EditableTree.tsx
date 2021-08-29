@@ -8,6 +8,15 @@ import IconEdit from './assets/icon-edit.svg'
 import IconDelete from './assets/icon-delete.svg'
 import IconCreate from './assets/icon-create.svg'
 
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  UserOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+} from '@ant-design/icons';
+
+
 import './styles/App.css'
 
 interface IEditableTree {
@@ -191,7 +200,7 @@ const EditableTree = ({
           onBlur={({ currentTarget }) => {
             handleLeafEdit(currentTarget.value, leaf.key)
           }}
-        />
+        /> 
       ),
       children: leaf.children
         ? renderTree(leaf.children, idx + 1, leaf.key, leaf.isCreate)
@@ -236,6 +245,9 @@ const EditableTree = ({
         onExpand={handleExpand}   // 展开/收起节点时触发
         onSelect={handleTreeNodeSelect} // 点击树节点触发
         autoExpandParent={autoExpand} //	是否自动展开父节点
+        icon={
+          <MenuUnfoldOutlined />
+        }
       />
     </div>
   )
